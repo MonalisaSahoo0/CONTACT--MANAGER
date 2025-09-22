@@ -1,0 +1,42 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Global background */
+body {
+  background: linear-gradient(135deg, #a8edea, #fed6e3); /* gradient background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* App container */
+.app {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 500px;
+  transition: 0.3s;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0077ff;
+}
+
+h2 {
+  margin: 20px 0 10px;
+  color: #444;
+  font-size: 1.2rem;
+}

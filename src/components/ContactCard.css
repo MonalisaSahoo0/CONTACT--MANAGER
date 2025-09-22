@@ -1,0 +1,52 @@
+.card {
+  background: #f1f4f9;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+  flex-wrap: wrap; /* allows buttons to move to next line if needed */
+}
+
+.card:hover {
+  background: #e6f0ff;
+  transform: translateY(-2px);
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  flex: 1; /* ensures text takes available space */
+}
+
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px; /* for smaller screens */
+}
+
+.card button {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card button:first-of-type {
+  background: #ffb703;
+  color: #fff;
+}
+
+.card button:last-of-type {
+  background: #ef233c;
+  color: white;
+}
+
+.card button:hover {
+  opacity: 0.9;
+}
