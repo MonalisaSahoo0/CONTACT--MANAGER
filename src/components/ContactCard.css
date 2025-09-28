@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   transition: 0.3s;
-  flex-wrap: wrap; /* allows buttons to move to next line if needed */
+  flex-wrap: wrap; /* allows content to wrap on smaller screens */
 }
 
 .card:hover {
@@ -15,16 +15,25 @@
   transform: translateY(-2px);
 }
 
-.card p {
-  margin: 0;
+.app.dark .card {
+  background: #2a2a2a;
+  color: #f0f0f0;
+}
+
+.card-info {
+  flex: 1; /* text section takes available space */
+}
+
+.card-info p {
+  margin: 2px 0;
   font-size: 1rem;
-  flex: 1; /* ensures text takes available space */
 }
 
 .card-buttons {
   display: flex;
   gap: 10px;
-  margin-top: 5px; /* for smaller screens */
+  margin-top: 5px; /* for small screens */
+  flex-wrap: wrap;
 }
 
 .card button {
@@ -38,15 +47,31 @@
 }
 
 .card button:first-of-type {
-  background: #ffb703;
+  background: #ffb703; /* Edit button */
   color: #fff;
 }
 
-.card button:last-of-type {
-  background: #ef233c;
+.card button:nth-of-type(2) {
+  background: #ef233c; /* Delete button */
   color: white;
+}
+
+.card button.favorite {
+  background: #ffd700; /* gold star for favorites */
+  color: #333;
 }
 
 .card button:hover {
   opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .card-buttons {
+    justify-content: flex-start;
+  }
 }

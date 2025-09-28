@@ -1,15 +1,21 @@
 import React from "react";
 import './ContactCard.css';
 
-function ContactCard({ contact, deleteContact, setEditingContact }) {
+function ContactCard({ contact, deleteContact, setEditingContact, toggleFavorite }) {
   return (
     <div className="card">
-  <p><strong>{contact.name}</strong> - {contact.email}</p>
-  <div className="card-buttons">
-    <button onClick={() => setEditingContact(contact)}>Edit</button>
-    <button onClick={() => deleteContact(contact.id)}>Delete</button>
-  </div>
-</div>
+      <div className="card-info">
+        <p><strong>{contact.name}</strong> - {contact.email}</p>
+        <p>📞 {contact.phone || "N/A"} | 🏠 {contact.address || "N/A"}</p>
+      </div>
+      <div className="card-buttons">
+        <button onClick={() => setEditingContact(contact)}>Edit</button>
+        <button onClick={() => deleteContact(contact.id)}>Delete</button>
+        <button className="favorite" onClick={() => toggleFavorite(contact.id)}>
+          {contact.favorite ? "★" : "☆"}
+        </button>
+      </div>
+    </div>
   );
 }
 
