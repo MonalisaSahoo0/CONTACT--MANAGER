@@ -86,6 +86,10 @@ function App() {
         setEditingContact={setEditingContact}
         toggleFavorite={toggleFavorite}
       />
+
+       <footer style={{ textAlign: "center", marginTop: "20px", fontSize: "14px" }}>
+      Developed by @Monalisa Sahoo 🚀
+    </footer>
     </div>
   );
 }
